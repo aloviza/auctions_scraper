@@ -21,6 +21,13 @@ root = lxml.html.fromstring(html)
 matchedlinks = root.cssselect("li p a")
 #print that
 print(matchedlinks)
+
+#Loop through the items in matchedlinks, calling each one li
+for li in matchedlinks:
+  #Store the text contents of li in a new variable listtext
+  listtext = li.text_content()
+  #print that
+  print(listtext)
   
 # "div[align='left']")
 #
