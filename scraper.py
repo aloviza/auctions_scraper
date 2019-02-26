@@ -29,7 +29,7 @@ for li in matchedlinks:
   #Store the text contents of li in a new variable listtext
   listtext = li.text_content()
   #print that
-  print(listtext)
+  print(li.text_content().encode('utf-8'))
 #store it in the 'record' dictionary under the key 'address'
   record['address'] = listtext
   #save the record to the datastore with 'address' as the unique key
