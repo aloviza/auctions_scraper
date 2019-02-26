@@ -12,7 +12,15 @@ html = scraperwiki.scrape("https://www.sdlauctions.co.uk/property-list/")
 # # Find something on the page using css selectors
 root = lxml.html.fromstring(html)
 root.cssselect("div[class='property-details-left']")
-print(root)
+
+# Find something on the page using css selectors
+root = lxml.html.fromstring(html)
+#Change "li p a" to a different CSS selector to grab something else
+#Look for an a tag inside a p tag inside an li tag
+#Store the matches in 'matchedlinks'
+matchedlinks = root.cssselect("li p a")
+#print that
+print(matchedlinks)
   
 # "div[align='left']")
 #
