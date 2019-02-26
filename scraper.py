@@ -11,7 +11,7 @@ print(html)
 
 # # Find something on the page using css selectors
 root = lxml.html.fromstring(html)
-root.cssselect(<div class="property-details-left">)
+root.cssselect(div class="property-details-left")
   
 # "div[align='left']")
 #
