@@ -7,11 +7,12 @@ import lxml.html
 # # Read in a page
 html = scraperwiki.scrape("https://www.sdlauctions.co.uk/property-list/")
 # print the variable html containing the webpage 
-print(html)
+# print(html)
 
 # # Find something on the page using css selectors
 root = lxml.html.fromstring(html)
 root.cssselect("div[class='property-details-left']")
+print(root)
   
 # "div[align='left']")
 #
