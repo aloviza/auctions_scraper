@@ -22,12 +22,18 @@ matchedlinks = root.cssselect("li p a")
 #print that
 print(matchedlinks)
 
+#create a dictionary called record
+record = {}
 #Loop through the items in matchedlinks, calling each one li
 for li in matchedlinks:
   #Store the text contents of li in a new variable listtext
   listtext = li.text_content()
   #print that
   print(listtext)
+#store it in the 'record' dictionary under the key 'address'
+  record['address'] = listtext
+  #save the record to the datastore with 'address' as the unique key
+  scraperwiki.sqlite.save(['address'],record)
   
 # "div[align='left']")
 #
